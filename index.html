@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+        <title>Live chat</title>
+		<script type="text/javascript">
+			window.onerror = function(message, url, lineNumber) {
+				alert("Error: "+message+" in "+url+" at line "+lineNumber);
+			}
+		</script>
+    </head>
+	<body id="main_content">
+		<div id="login_content" style="display:none;">
+			<div class="login_cont">
+				<div class="login">
+					<img src="img/logo.png" style="width: 300px; margin-bottom: 20px; opacity: 0.9;">
+					<h2 id="liveChat_login_error" style="display:none;"></h2>
+					<input type="email" placeholder="E-mail" id="liveChat_login_email">
+					<input type="password" placeholder="Password" id="liveChat_login_password">
+					<div class="poga" id="liveChat_login_submit">Log in</div>
+				</div>
+			</div>
+		</div>
+		<div id="chat_content" style="display:none;">
+			<div id="chat_conversation_content">
+				<div class="resp_top">
+					<div class="exit liveChat_chat_exit"></div>
+				</div>
+				<div class="exit liveChat_chat_exit">
+					<h3>Log out</h3>
+				</div>
+				<div class="list_cont" id="liveChat_chat_conversation_list">
+				</div>
+			</div>
+			<div id="chat_message_content">
+				<div class="resp_top">
+					<div class="delete"></div>
+					<div class="older"></div>
+				</div>
+				<div class="delete">
+					<h3>Delete Chat</h3>
+				</div>
+				<div class="older">
+					<h3>Back</h3>
+				</div>
+				<div class="chata_cont">
+					<div class="zina_cont">
+					   <h3 class="timeAgo">18 min ago</h3>
+					   <div class="user">A</div>
+					   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					   <div class="clear"></div>
+					</div>
+					<div class="zina_cont viesis">
+					   <h3 class="timeAgo">18 min ago</h3>
+					   <div class="user user2">B</div>
+					   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					   <div class="clear"></div>
+					</div>
+				</div>
+				<div class="ievade">
+					<div class="content">
+						<textarea placeholder="Send a message" spellcheck="false"></textarea>
+						<div class="send">Send</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
